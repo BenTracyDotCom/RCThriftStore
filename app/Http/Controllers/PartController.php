@@ -9,6 +9,6 @@ class PartController extends Controller
 {
   public function index() {
     $part = "This is the parts page!";
-    return view('parts', ['part' => $part]);
+    return view('parts.index', ['part' => $part]);
   }
 }
