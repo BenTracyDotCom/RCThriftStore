@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('user_id');
-            $table->inteder('part_id');
+            $table->integer('part_id');
         });
     }
 

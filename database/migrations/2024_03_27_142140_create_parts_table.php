@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('photo');
             $table->string('status');
             $table->integer('order_id');
-            $table->timestamp('created_at');
+            $table->timestamp('added_at');
         });
     }
 
