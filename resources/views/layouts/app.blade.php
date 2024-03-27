@@ -14,7 +14,7 @@
 <header>
   <nav class="navbar bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{ route('posts.index') }}">Mini-Blog</a>
+      <a class="navbar-brand" href="{{ route('parts.index') }}">Mini-Blog</a>
     </div>
   </nav>
 </header>

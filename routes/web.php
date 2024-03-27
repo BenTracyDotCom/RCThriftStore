@@ -3,11 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PartController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //Routes to 'index' method of PartController
-Route::get('/parts', [PartController::class, 'index']);
+Route::resource('/', PartController::class)->names([
+  'index' => 'parts.index',
+  'create' => 'parts.create',
+  'store' => 'parts.store',
+  'show' => 'parts.show',
+]);
 
 
