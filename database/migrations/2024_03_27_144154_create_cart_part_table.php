@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('parts_carts', function (Blueprint $table) {
+        Schema::create('cart_part', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignIdFor(\App\Models\Part::class);
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('parts_carts');
+        Schema::dropIfExists('cart_part');
     }
 };

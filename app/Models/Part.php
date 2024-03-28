@@ -8,5 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Part extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'image'];
+
+    public function orders()
+    {
+      return $this->belongsTo(Order::class);
+    }
+
+    public function users()
+    {
+      return $this->belongsToMany(User::class);
+    }
+
+    public function carts()
+    {
+      return $this->belongsToMany(Part::class);
+    }
+
+    protected $fillable = ['title', 'type', 'description', 'price', 'image'];
   }
