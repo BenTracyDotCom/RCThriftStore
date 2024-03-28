@@ -20,8 +20,8 @@ return new class extends Migration
             $table->float('price');
             $table->string('photo');
             $table->string('status');
-            $table->integer('order_id');
             $table->timestamp('added_at');
+            $table->foreignIdFor(\App\Models\Order::class)->constrained()->deferrable();
         });
     }
 

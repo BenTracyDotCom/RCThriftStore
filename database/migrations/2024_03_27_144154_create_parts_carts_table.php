@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('parts_carts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('part_id');
-            $table->integer('cart_id');
+            $table->foreignIdFor(\App\Models\Part::class);
+            $table->foreignIdFor(\App\Models\Cart::class);
         });
     }
 

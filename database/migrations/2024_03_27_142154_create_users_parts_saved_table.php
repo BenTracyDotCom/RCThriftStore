@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('users_parts_saved', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('user_id');
-            $table->integer('part_id');
+            $table->foreignIdFor(\App\Models\User::class);
+            $table->foreignIdFor(\App\Models\Part::class);
         });
     }
 
